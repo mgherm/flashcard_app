@@ -57,4 +57,5 @@ FlashcardApp::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   get "/decks" => "decks#index"
+  get "/decks/:id" => "decks#show"
 end
