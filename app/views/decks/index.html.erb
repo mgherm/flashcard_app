@@ -1,0 +1,9 @@
+Welcome
+<div> <%= link_to "new deck", "/decks/new" %> </div>
+<% @decks.each do |deck| %>
+    <div>
+      <%= link_to deck.name, "/decks/#{deck.id}" %>
+      <%= link_to "Edit", "/decks/#{deck.id}/edit" %>
+      <%= link_to "Delete", "/decks/#{deck.id}" %>
+    </div>
+<% end %>
