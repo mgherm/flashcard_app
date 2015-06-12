@@ -4,6 +4,6 @@ Welcome
     <div>
       <%= link_to deck.name, "/decks/#{deck.id}" %>
       <%= link_to "Edit", "/decks/#{deck.id}/edit" %>
-      <%= link_to "Delete", "/decks/#{deck.id}" %>
+      <%= link_to "Delete", "/decks/#{deck.id}", method: :delete, data: { confirm: "are you sure?" } %>
     </div>
 <% end %>
