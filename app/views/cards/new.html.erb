@@ -1,0 +1,6 @@
+<%= form_for([@deck, @card]) do |form| %>
+    <%= render form %>
+<div>
+  <%= form.submit("create card") %>
+</div>
+<% end %>

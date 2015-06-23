@@ -1,5 +1,7 @@
 FlashcardApp::Application.routes.draw do
-  resources :decks
+  resources :decks do
+    resources :cards, except: :index
+  end
   # get "/decks" => "decks#index"
   # get "/decks/new" => "decks#new"
   # get "/decks/:id" => "decks#show", as: :deck

@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20150617010026) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "cards", ["deck_id"], :name => "index_cards_on_deck_id"
+
   create_table "decks", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
