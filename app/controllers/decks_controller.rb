@@ -1,6 +1,6 @@
 class DecksController < ApplicationController
   def index
-    @decks = Deck.all
+    @decks = current_user.decks
   end
   def show
     @deck = Deck.find(params[:id])
@@ -11,6 +11,7 @@ class DecksController < ApplicationController
   end
   def create
     @deck = Deck.new(params[:deck])
+    @deck.user_id=current_user.id
     @deck.save
     redirect_to decks_path
   end
