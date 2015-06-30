@@ -1,5 +1,6 @@
 Welcome
 <div> <%= link_to "new deck", new_deck_path %> </div>
+<%= link_to "Sign out", session_path , method: :delete %>
 <% @decks.each do |deck| %>
     <div>
       <%= link_to deck.name, deck %>
